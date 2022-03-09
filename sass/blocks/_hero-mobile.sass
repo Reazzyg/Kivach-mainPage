@@ -1,0 +1,94 @@
+.hero
+  &-mobile
+    padding-top: 125px
+    display: none
+    &-container
+      display: flex
+      align-items: center
+      flex-direction: column
+      row-gap: 20px
+    &-wrapper
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      max-height: 600px
+      column-gap: 30px
+      row-gap: 30px
+    &-logoLink
+      display: none
+    &-heart
+      display: none
+    &-link
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      width: 355px
+      height: 70px
+      padding: 8px 15px 8px 35px
+      font-family: $regular
+      font-size: 22px
+      font-weight: 700
+      line-height: 27px
+      text-decoration: none
+      color: $text-color
+      text-align: center
+      background: linear-gradient(270deg, rgba(101, 188, 71, 0.2) 6.34%, rgba(101, 188, 71, 0.55) 88.36%)
+      border: 2px solid #65BC47
+      border-radius: 0px 12px 12px 0px
+      transform: translateX(15px)
+      &::before
+        content: ''
+        position: absolute
+        top: -2px
+        left: -35px
+        height: 66px
+        width: 66px
+        background-color: #fff
+        border-radius: 50%
+        border: 2px solid #65BC47
+        z-index: 99
+      &:nth-child(1) .hero-mobile-link__img
+        left: -31px
+      &:nth-child(2) .hero-mobile-link__img
+        height: 50px
+        left: -25px
+      &:nth-child(3) .hero-mobile-link__img
+        height: 45px
+        left: -23px
+      &:nth-child(4) .hero-mobile-link__img
+        left: -26px
+      &:nth-child(5) .hero-mobile-link__img
+        height: 45px
+        left: -23px
+      &:nth-child(6) .hero-mobile-link__img
+        height: 50px
+        left: -16px
+      &:nth-child(7) .hero-mobile-link__img
+        height: 48px
+        left: -25px
+      &:nth-child(8) .hero-mobile-link__img
+        height: 65px
+        left: -14px
+      &:nth-child(9) .hero-mobile-link__img
+        height: 55px
+        left: -25px
+      &:nth-child(10) .hero-mobile-link__img
+        height: 55px
+        left: -22px
+      &:nth-child(11) .hero-mobile-link__img
+        height: 45px
+        left: -25px
+
+      &__img
+        position: absolute
+        left: -25px
+        z-index: 99
+        height: 50px
+    &__title
+      font-family: 'Philosopher', sans-serif
+      font-size: 20px
+      line-height: 22px
+      font-style: italic
+      color: #5C6366
+      font-weight: 400

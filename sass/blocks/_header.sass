@@ -1,0 +1,243 @@
+.header
+  padding-top: 26px
+  padding-bottom: 26px
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  background-color: #fff
+  z-index: 99999
+  &-shadow
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    gap: 17px
+
+  &-logo
+    width: 179px
+    &-mobile
+      display: none
+  &-menu
+    &-mobile
+      background-color: #fff
+      position: fixed
+      z-index: 9999
+      right: 100%
+      top: 106px
+      left: 0
+      bottom: 0
+      overflow: scroll
+      transition: right .4s
+      &-wrapper
+        position: relative
+        padding-top: 25px
+        height: 100vh
+        overflow: scroll
+    &__list
+      display: flex
+      gap: 38px
+      &-mobile
+        flex-direction: column
+        align-items: center
+        flex-basis: 45%
+        gap: 15px
+        margin-bottom: 20px
+    &__link
+      color: $menu-color
+      font-family: $medium
+      font-weight: 500
+      transition: color .5s
+    &__item
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 2px
+        right: -19px
+        height: 16px
+        width: 2px
+        background-color: #DDDDDD
+      &:nth-child(7)
+        &::after
+          display: none
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        height: 2px
+        background-color: $light-green
+        transition: width .3s
+
+      &-mobile
+        &::after
+          display: none
+        &::before
+          content: ''
+          position: absolute
+          left: -10px
+          top: -10px
+          width: 6px
+          height: 38px
+          background-color: #E5E5E5
+        &--green
+          &::after
+            display: none
+          &::before
+            content: ''
+            position: absolute
+            left: -10px
+            top: -10px
+            width: 6px
+            height: 38px
+            background-color: #65BC47
+        &--greenWide
+          &::after
+            display: none
+          &::before
+            content: ''
+            position: absolute
+            left: -10px
+            top: 0px
+            width: 6px
+            height: 38px
+            background-color: #65BC47
+        &--wide
+          &::after
+            display: none
+          &::before
+            content: ''
+            position: absolute
+            left: -10px
+            top: 0px
+            width: 6px
+            height: 38px
+            background-color: #E5E5E5
+    &__langSwitch
+      display: flex
+      justify-content: center
+      margin-bottom: 20px
+      flex-basis: 100%
+      color: $light-green
+      font-family: $medium
+      font-weight: 600
+      text-decoration: underline
+  &-button
+    display: none
+    height: 34px
+    width: 35px
+    position: relative
+    outline: none
+    border: none
+    background-color: transparent
+    &__line
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: #5C6366
+      transition: background-color .1s
+      transform: translate(-50%,-50%)
+      &::before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 2px
+        background-color: #5C6366
+        transform: translate(-50%,-50%)
+        top: 7px
+        transition: transform .3s
+      &::after
+        content: ''
+        position: absolute
+        width: 20px
+        height: 2px
+        background-color: #5C6366
+        transform: translate(-50%,50%)
+        bottom: 7px
+        transition: transform .3s
+      &-close
+        background-color: transparent
+        &::before
+          content: ''
+          position: absolute
+          width: 20px
+          height: 2px
+          background-color: #5C6366
+
+          transform: translate(-50%,-50%) rotate(45deg)
+          top: 0
+        &::after
+          content: ''
+          position: absolute
+          width: 20px
+          height: 2px
+          background-color: #5C6366
+
+          transform: translate(-50%,-50%) rotate(135deg)
+          bottom: 0
+  &-social
+    display: flex
+    justify-content: center
+    flex-basis: 100%
+    &__icon
+      width: 28px
+      height: 28px
+      margin-right: 13px
+  &-info
+    display: flex
+    align-items: center
+    gap: 10px
+    &__button
+      font-family: $bold
+      padding: 2px 15px
+      padding-right: 20px
+      position: relative
+      z-index: 1
+      &::after
+        content: ''
+        position: absolute
+        top: 8px
+        right: 12px
+        width: 0
+        height: 0
+        border-left: 2px solid transparent
+        border-right: 2px solid transparent
+        border-top: 5px solid white
+    &__tel
+      font-family: $medium
+      color: $text-color
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 2px
+        right: -5px
+        height: 17px
+        width: 1px
+        background-color: #DDDDDD
+    &__workTime
+      color: $light-green
+      font-family: $medium
+    &__lang
+      display: flex
+      gap: 15px
+      flex-direction: column
+      position: absolute
+      z-index: 99
+      background-color: #fff
+      padding: 12px 20px
+      box-shadow: 2px 2px 25px rgba(86, 129, 181, 0.14)
+      display: none
+    &__languages
+      font-family: $regular
+      font-size: 15px
+      color: $text-color
+      cursor: pointer

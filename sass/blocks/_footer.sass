@@ -1,0 +1,81 @@
+.footer
+  background-color: $footer-bgc
+  padding: 50px 0 50px 0
+  &-container
+    display: flex
+    flex-direction: column
+    gap: 20px
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-block
+    display: flex
+    &__maw180
+      max-width: 180px
+    &__maw576
+      max-width: 576px
+
+  &-icon
+    height: 18px
+    width: 18px
+  &-wrap
+    display: flex
+    flex-direction: column
+    margin-left: 19px
+  &-link
+    &__tel
+      font-family: $bold
+      font-size: 18px
+      color: $footer-white
+    &__description
+      font-family: $bold
+      font-size: 12px
+      color: $footer-grey
+  &-button
+    padding: 11px 30px
+    font-family: $bold
+    font-size: 16px
+  &-about
+    font-family: $medium
+    color: $footer-white
+    font-size: 16px
+    text-align: center
+  &-place
+    font-family: $medium
+    color: $footer-white
+    font-size: 16px
+  &-social
+    &__icon
+      width: 28px
+      height: 28px
+      margin-right: 13px
+    &__circle
+      transition: fill, .5s
+  &-policy
+    font-family: $medium
+    font-size: 16px
+    color: $light-green
+    text-decoration: underline
+  &-legacy
+    font-family: $medium
+    font-size: 11px
+    color: $footer-grey
+    &__link
+      text-decoration: none
+      color: $light-green
+.to-top
+  position: fixed
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  bottom: 3%
+  right: 3%
+  z-index: 1000
+  width: 40px
+  height: 40px
+  &__icon
+    width: 30px
+  &--visible
+    display: flex
