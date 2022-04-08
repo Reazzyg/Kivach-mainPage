@@ -1,0 +1,64 @@
+.callback
+  padding-top: 45px
+  width: 100%
+  &-title
+    font-family: $regular
+    font-size: 30px
+    font-weight: 500
+    color: $light-green
+    width: 70%
+    margin-bottom: 25px
+  &-img
+    position: absolute
+    right: 0
+    bottom: 20px
+    border-radius: 50%
+    width: 255px
+    height: 255px
+    object-fit: cover
+    z-index: 3
+    border: 10px solid #65BC47
+  &-block
+    position: relative
+    padding-top: 15px
+    padding-bottom: 25px
+    padding-left: 35px
+    background-color: $light-green
+    border-radius: 10px
+  &-mobile
+    display: none
+  &-subtitle
+    font-family: 'Philosopher', sans-serif
+    font-size: 38px
+    line-height: 25px
+    font-style: italic
+    color: #5C6366
+    font-weight: 400
+    margin-top: 25px
+  &-bottom
+    display: flex
+    flex-wrap: wrap
+    gap: 50px
+    &-block
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 10px
+      &__img
+        width: 70px
+      &__link
+        position: relative
+        font-family: $regular
+        font-size: 18px
+        font-weight: 400
+        color: #000
+        cursor: pointer
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 0
+          height: 2px
+          background-color: #000
+          transition: width .3s
