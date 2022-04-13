@@ -25,12 +25,43 @@
     &-mobile
       display: none
   &-menu
+    &-submenu
+      position: absolute
+      padding: 10px 20px
+      width: 200px
+      display: flex
+      flex-direction: column
+      gap: 15px
+      background-color: #fff
+      right: -20px
+      // border: 1px solid $light-green
+      border-top: none
+      border-radius: 10px
+      box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.25)
+      top: -1000px
+      transition: top .5s .2s
+      &__link
+        color: $menu-color
+        font-family: $medium
+        font-weight: 500
+        transition: color .5s
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 0
+          height: 2px
+          background-color: $light-green
+          transition: width .3s
+      &__item
+        position: relative
     &-mobile
       background-color: #fff
       position: fixed
       z-index: 9999
       right: 100%
-      top: 106px
+      top: 96px
       left: 0
       bottom: 0
       overflow: scroll
@@ -54,6 +85,15 @@
       font-family: $medium
       font-weight: 500
       transition: color .5s
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 0
+        height: 2px
+        background-color: $light-green
+        transition: width .3s
     &__item
       position: relative
       &::after
@@ -67,15 +107,6 @@
       &:nth-child(7)
         &::after
           display: none
-      &::before
-        content: ''
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 0
-        height: 2px
-        background-color: $light-green
-        transition: width .3s
 
       &-mobile
         &::after

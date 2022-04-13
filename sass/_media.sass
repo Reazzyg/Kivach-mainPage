@@ -4,12 +4,16 @@
 
   .header-info__languages:hover
     color: $light-green
-  .header-menu__item:hover
-
+  .header-menu__item:hover .header-menu__link
+    &::before
+      width: 100%
+  .header-menu-submenu__item:hover .header-menu-submenu__link
     &::before
       width: 100%
   .header-menu__item:hover .header-menu__link
     color: $light-green
+  .header-menu__item:hover  .header-menu-submenu
+    top: 100%
   .hero-link:hover
     background: #308912
     border: 3px solid #308912
@@ -162,6 +166,7 @@
   .header-menu
     display: none
     &-mobile
+      top: 86px
       &-wrapper
         display: flex
         flex-wrap: wrap
@@ -233,8 +238,7 @@
       font-size: 15px
   .header-info__tel::after
     right: -6px
-  .header-menu-mobile
-    top: 95px
+
   .hero-mobile
     &-container
       display: flex
